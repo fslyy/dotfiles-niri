@@ -1,0 +1,134 @@
+@import "/home/felix/.cache/hellwal/rofi.rasi"
+
+configuration {
+  modes: "window,drun,run,ssh,";
+  font: "FiraCode Nerd Font 14";
+  drun-display-format: "{name}";
+}
+
+* {
+  background: transparent;
+}
+
+window {
+  fullscreen: true;
+  padding: 35% 30%;       // you might want to ajust these to resize rofi.
+  transparency: "real";
+  background-color: @normal-background-transparent;
+  border-color: @normal-background-transparent;
+}
+
+mainbox {
+  transparency: "real";
+  background-color: transparent;
+}
+
+listview {
+  background-color: transparent;
+  border: 0 0 0 0;
+  padding: 2 0 0;
+  scrollbar: true;
+}
+
+scrollbar {
+    background-color: transparent;
+    width:        0px;
+    border:       0;
+    handle-color: @normal-foreground;
+    handle-width: 0px;
+    padding:      0 0;
+}
+
+entry {
+    background-color: transparent;
+    placeholder: "";
+}
+
+// less interesting stuff {{{
+
+// using elements from:
+// https://github.com/bardisty/gruvbox-rofi/blob/master/gruvbox-common.rasi
+
+textbox {
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+element {
+    background-color: transparent;
+    border:  0;
+    padding: 2px;
+}
+element.normal.normal {
+    transparency: "real";
+    background-color: transparent;
+    text-color:       @normal-foreground;
+}
+element.normal.urgent {
+    background-color: transparent;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: transparent;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-normal-background;
+    text-color:       @urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.alternate.normal {
+    background-color: transparent;
+    text-color:       @normal-foreground;
+}
+element.alternate.urgent {
+    background-color: transparent;
+    text-color:       @urgent-foreground;
+}
+element.alternate.active {
+    background-color: transparent;
+    text-color:       @active-foreground;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @normal-foreground;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: transparent;
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    background-color: transparent;
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @normal-foreground;
+    margin:     0 0.3em 0 0;
+    background-color: transparent;
+}
