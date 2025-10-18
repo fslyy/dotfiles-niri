@@ -15,7 +15,7 @@ else # display selected theme and choose a fitting wallpaper for it
   theme=${1%.*} #slice var until .
   
   # set wallpaper
-  swww img $(find ~/Pictures/Wallpapers/ -type f -name "${theme}*" | shuf -n 1)
+  swww img $(find ~/Pictures/Wallpapers/$theme -type f | shuf -n 1)
 
 fi
 # ------------ APPLY THEME -----------
