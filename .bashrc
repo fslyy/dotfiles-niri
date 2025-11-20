@@ -1,4 +1,4 @@
-#a
+#
 # ~/.bashrc
 #
 
@@ -22,8 +22,8 @@ if [ $LIVE_COUNTER -eq 1 ]; then
      fastfetch
 fi
 
-# add jdk 21 to path and set java_home
+# add jdk 25 to path and set java_home
 
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 

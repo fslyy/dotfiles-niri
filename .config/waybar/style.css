@@ -18,9 +18,9 @@
 
 #window{
   background-color: @background;
-  margin-top: 4px; /* 与屏幕顶部留出距离 */
+  margin-top: 2px; /* 与屏幕顶部留出距离 */
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
+  padding: 2px 2px; /* 保持内部间距 */
   border-width: 0px;
 
 }
@@ -40,9 +40,9 @@
 #memory,
 #cpu{
   background-color: @background;
-  margin-top: 4px; /* 与屏幕顶部留出距离 */
+  margin-top: 2px; /* 与屏幕顶部留出距离 */
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
+  padding: 2px 2px; /* 保持内部间距 */
   border-width: 0px;
 }
 
