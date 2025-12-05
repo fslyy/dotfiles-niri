@@ -1,0 +1,14 @@
+{
+    "editor.tokenColorCustomizations": {
+        "functions":    "{{ colors.primary.hex }}",
+        "keywords":     "{{ colors.tertiary.hex }}",
+        "numbers":      "{{ colors.secondary.hex }}",
+        "strings":      "{{ colors.tertiary_container.hex }}",
+        "types":        "{{ colors.primary_container.hex }}",
+        "variables":    "{{ colors.on_surface.hex }}",
+        "comments":     "{{ colors.outline.hex }}"
+    },
+    "workbench.colorCustomizations": {
+        "editor.background": "{{ colors.surface_container_lowest.hex }}"
+    }
+}

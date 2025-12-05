@@ -1,4 +1,4 @@
-@import "/home/felix/.cache/hellwal/rofi.rasi"
+@import "/home/felix/.config/rofi/rofi-colors.rasi"
 
 configuration {
   modes: "window,drun,run,ssh,";
@@ -12,10 +12,10 @@ configuration {
 
 window {
   fullscreen: true;
-  padding: 35% 30%;       // you might want to ajust these to resize rofi.
+  padding: 35% 30%;
   transparency: "real";
-  background-color: @normal-background-transparent;
-  border-color: @normal-background-transparent;
+  background-color: @surface-container-lowest-transparent;
+  border-color: @surface-container-lowest-transparent;
 }
 
 mainbox {
@@ -34,7 +34,7 @@ scrollbar {
     background-color: transparent;
     width:        0px;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @on-surface;
     handle-width: 0px;
     padding:      0 0;
 }
@@ -44,14 +44,9 @@ entry {
     placeholder: "";
 }
 
-// less interesting stuff {{{
-
-// using elements from:
-// https://github.com/bardisty/gruvbox-rofi/blob/master/gruvbox-common.rasi
-
 textbox {
     background-color: transparent;
-    text-color: @normal-foreground;
+    text-color: @on-surface;
 }
 
 element {
@@ -59,54 +54,63 @@ element {
     border:  0;
     padding: 2px;
 }
+
 element.normal.normal {
     transparency: "real";
     background-color: transparent;
-    text-color:       @normal-foreground;
+    text-color: @on-surface;
 }
+
 element.normal.urgent {
     background-color: transparent;
-    text-color:       @urgent-foreground;
+    text-color: @error;
 }
+
 element.normal.active {
     background-color: transparent;
-    text-color:       @active-foreground;
+    text-color: @primary;
 }
+
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @surface-container-high;
+    text-color: @on-surface;
 }
+
 element.selected.urgent {
-    background-color: @selected-normal-background;
-    text-color:       @urgent-foreground;
+    background-color: @surface-container-high;
+    text-color: @error;
 }
+
 element.selected.active {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @surface-container-high;
+    text-color: @on-surface;
 }
+
 element.alternate.normal {
     background-color: transparent;
-    text-color:       @normal-foreground;
+    text-color: @on-surface;
 }
+
 element.alternate.urgent {
     background-color: transparent;
-    text-color:       @urgent-foreground;
+    text-color: @error;
 }
+
 element.alternate.active {
     background-color: transparent;
-    text-color:       @active-foreground;
+    text-color: @primary;
 }
 
 sidebar {
-    border:       2px 0 0;
-    border-color: @normal-foreground;
+    border: 2px 0 0;
+    border-color: @on-surface;
     background-color: transparent;
 }
 
 inputbar {
     background-color: transparent;
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @on-surface;
     padding:    2px;
     children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
 }
@@ -117,18 +121,18 @@ prompt,
 button {
     background-color: transparent;
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @on-surface;
 }
 
 button.selected {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color: @surface;
+    text-color: @on-surface;
 }
 
 textbox-prompt-sep {
     expand:     false;
     str:        ":";
-    text-color: @normal-foreground;
+    text-color: @on-surface;
     margin:     0 0.3em 0 0;
     background-color: transparent;
 }

@@ -2,7 +2,7 @@
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
 
-// include "niri-colors.kdl" -> doesnt work (next release)
+
 
 hotkey-overlay {
     skip-at-startup
@@ -346,8 +346,6 @@ binds {
     // custom binds
     Mod+Return hotkey-overlay-title="Open Terminal" {spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run Application" { spawn-sh "pkill rofi || rofi -show drun"; }
-    Mod+0 hotkey-overlay-title="Change Colorscheme" { spawn-sh "pkill rofi || /home/felix/.config/rofi/colorscheme_change_menu.sh"; }
-    Mod+ssharp hotkey-overlay-title="lock screen" { spawn ".scripts/lock_and_blur.sh"; }
 
    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -594,4 +592,12 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+    // dms keybinds
+    Mod+n {spawn "dms" "ipc" "call" "wallpaper" "prev"; }
+    Mod+m {spawn "dms" "ipc" "call" "wallpaper" "next"; }
+    Mod+ssharp {spawn "dms" "ipc" "call" "lock" "lock"; }
 }
+
+include "dms/colors.kdl"
+//include "dms/layout.kdl"

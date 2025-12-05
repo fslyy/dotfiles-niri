@@ -1,0 +1,11 @@
+[config]
+
+[templates.obsidian]
+input_path = "/home/felix/.config/matugen/templates/obsidian-colors.css"
+output_path = "/home/felix/Uni/.obsidian/themes/Matugen/theme.css"
+
+[templates.rofi]
+input_path = "/home/felix/.config/matugen/templates/rofi-colors.rasi"
+output_path = "/home/felix/.config/rofi/rofi-colors.rasi"
+
+
