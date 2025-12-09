@@ -1,15 +1,19 @@
 //start ups
-spawn-at-startup "swww-daemon"
-spawn-at-startup "waybar"
-
+spawn-at-startup "dms" "run"
 
 
 hotkey-overlay {
     skip-at-startup
 }
 
+
 layer-rule {
-    match namespace="^swww-daemon$"
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="dms:blurwallpaper"
     place-within-backdrop true
 }
 
@@ -601,3 +605,5 @@ binds {
 
 include "dms/colors.kdl"
 //include "dms/layout.kdl"
+include "dms/alttab.kdl"
+//include "dms/binds.kdl"
