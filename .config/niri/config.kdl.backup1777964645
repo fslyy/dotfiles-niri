@@ -285,11 +285,6 @@ window-rule {
     opacity 0.7
     draw-border-with-background false
 }
-window-rule {
-    match app-id="ratty"
-    opacity 0.7 
-    draw-border-with-background false
-}
 
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -354,10 +349,9 @@ binds {
 
     // custom binds
     Mod+Return hotkey-overlay-title="Open Terminal" {spawn "kitty"; }
-    Mod+R hotkey-overlay-title="RATTY" {spawn "ratty"; }
     Mod+Space hotkey-overlay-title="Run Application" { spawn-sh "pkill rofi || rofi -show drun"; }
 
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
+   // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
 
@@ -613,5 +607,3 @@ include "dms/colors.kdl"
 //include "dms/layout.kdl"
 include "dms/alttab.kdl"
 //include "dms/binds.kdl"
-
-include "dms/cursor.kdl"

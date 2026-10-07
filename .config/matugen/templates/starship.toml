@@ -1,0 +1,244 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$character"""
+
+
+
+add_newline = false
+
+# --------------------------------
+# DIRECTORY
+# --------------------------------
+
+[directory]
+read_only = " 󰌾"
+style = "fg:{{colors.primary.default.hex}}"
+read_only_style = "fg:{{colors.error.default.hex}}"
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[ $path]($style)[$read_only]($read_only_style) "
+
+# --------------------------------
+# OS
+# --------------------------------
+
+[os]
+disabled = true
+format = "[$symbol ]($style)"
+style = "fg:{{colors.secondary.default.hex}}"
+
+# --------------------------------
+# CHARACTER
+# --------------------------------
+
+[character]
+success_symbol = "[❯](bold {{colors.primary.default.hex}})"
+error_symbol = "[❯](bold {{colors.error.default.hex}})"
+vimcmd_symbol = "[❮](bold {{colors.secondary.default.hex}})"
+
+# --------------------------------
+# GIT
+# --------------------------------
+
+[git_branch]
+symbol = " "
+style = "{{colors.secondary.default.hex}}"
+
+[git_status]
+style = "{{colors.on_surface_variant.default.hex}}"
+
+# --------------------------------
+# LANGUAGE SYMBOLS
+# --------------------------------
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+# --------------------------------
+# DISABLED MODULES
+# --------------------------------
+
+[aws]
+disabled = true
+
+[cmake]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[fennel]
+disabled = true
+
+[fossil_branch]
+disabled = true
+
+[guix_shell]
+disabled = true
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[julia]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[meson]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[package]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[rlang]
+disabled = true
+
+[ruby]
+disabled = true
+
+[scala]
+disabled = true
+
+# --------------------------------
+# HOSTNAME
+# --------------------------------
+
+[hostname]
+ssh_symbol = " "
+
+# --------------------------------
+# GIT COMMIT
+# --------------------------------
+
+[git_commit]
+tag_symbol = "  "
+
+# --------------------------------
+# OS SYMBOLS
+# --------------------------------
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "

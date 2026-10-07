@@ -1,0 +1,65 @@
+[window]
+width = 960
+height = 620
+scale_factor = 1.0
+opacity = 0.8
+
+[terminal]
+default_cols = 104
+default_rows = 32
+scrollback = 2000
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+size = 17
+
+[cursor.model]
+path = "CairoSpinyMouse.obj"
+scale_factor = 6.0
+brightness = 0.5
+x_offset = 0.5
+plane_offset = 18.0
+visible = true
+
+[cursor.animation]
+spin_speed = 4
+bob_speed = 2.2
+bob_amplitude = 0.08
+
+[bindings]
+keys = [
+  { key = "C", with = "Control | alt", action = "Copy" },
+  { key = "V", with = "Control | alt", action = "Paste" },
+  { key = "Equal", with = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", with = "Control", action = "DecreaseFontSize" },
+  { key = "Digit0", with = "Control | alt", action = "ResetFontSize" },
+  { key = "Enter", with = "Control | alt", action = "Toggle3DMode" },
+  { key = "M", with = "Control | alt", action = "ToggleMobiusMode" },
+  { key = "Up", with = "Control | alt", action = "IncreaseWarp" },
+  { key = "Down", with = "Control | alt", action = "DecreaseWarp" }
+]
+
+##################################
+# Matugen Theme
+##################################
+
+[theme]
+foreground = "{{colors.on_surface.default.hex}}"
+background = "{{colors.surface.default.hex}}"
+cursor = "{{colors.primary.default.hex}}"
+
+[theme.normal]
+black   = "{{colors.surface_container_low.default.hex}}"
+red     = "{{colors.error.default.hex}}"
+green   = "{{colors.secondary.default.hex}}"
+yellow  = "{{colors.tertiary.default.hex}}"
+blue    = "{{colors.primary.default.hex}}"
+magenta = "{{colors.secondary_container.default.hex}}"
+cyan    = "{{colors.tertiary_container.default.hex}}"
+white   = "{{colors.on_surface.default.hex}}"
+
+
